@@ -1,4 +1,4 @@
-name: API Automation Tests
+name: API Automation
 
 on:
   push:
@@ -34,10 +34,14 @@ jobs:
             ${{ runner.os }}-maven
 
       - name: Run Tests
-        run: mvn clean test
+        run: |
+          mvn clean test \
+          -DemailUser=${{ secrets.EMAIL_USER }} \
+          -DemailPassword=${{ secrets.EMAIL_PASSWORD }} \
+          -DemailTo=${{ secrets.EMAIL_TO }}
 
       - name: Upload Test Reports
         uses: actions/upload-artifact@v4
         with:
           name: Test-Reports
-          path: target/
+          path: test-output/
