@@ -163,6 +163,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;API Automation Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;listeners.ExtentListener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;3&quot; parallel=&quot;methods&quot; name=&quot;API Tests&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;api.tests.TokenTest&quot;/&gt;
@@ -210,7 +213,7 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'validateGetEventsAPI')
 data.setCell(0, 2, 'api.tests.SecuredApiTest')
-data.setCell(0, 3, 2910);
+data.setCell(0, 3, 845);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'verifyTokenGeneration')
 data.setCell(1, 2, 'api.tests.TokenTest')
@@ -219,7 +222,7 @@ window.suiteTableData['API_Automation_Suite']= { tableData: data, tableDiv: 'tim
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 847 ms</span>
               <div id="times-div-API_Automation_Suite">
               </div> <!-- times-div-API_Automation_Suite -->
             </div> <!-- times-div -->
@@ -257,16 +260,19 @@ return data;
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
-              <div class="test-method">
-                <span class="method-name">verifyTokenGeneration</span>
-                <span class="method-start">1753 ms</span>
-              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">api.tests.SecuredApiTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">validateGetEventsAPI</span>
-                <span class="method-start">1753 ms</span>
+                <span class="method-start">1712 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">api.tests.TokenTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyTokenGeneration</span>
+                <span class="method-start">1712 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

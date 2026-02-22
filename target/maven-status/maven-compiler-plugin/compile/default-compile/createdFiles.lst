@@ -1,2 +1,5 @@
+utils/EmailSender.class
+utils/EmailSender$1.class
 endpoints/Endpoints.class
+reports/ExtentManager.class
 payloads/Payloads.class
