@@ -37,7 +37,7 @@ jobs:
         run: |
           mvn clean test \
           -DemailUser=${{ secrets.EMAIL_USER }} \
-          -DemailPassword=${{ secrets.EMAIL_PASSWORD }} \
+          -DemailPassword=${{ secrets.EMAIL_PASSWORD_NEW }} \
           -DemailTo=${{ secrets.EMAIL_TO }}
 
       - name: Upload Test Reports
